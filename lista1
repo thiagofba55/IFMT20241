@@ -1,0 +1,362 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+/*
+Exercícios sobre os comandos básicos em C
+*/
+
+//1. Faça um programa que imprima o seu nome.
+void q01() {
+    printf("Thiago Felipe\n");
+}
+
+//2. Faça um programa que imprima o produto dos valores 30 e 27.
+void q02() {
+    printf("Resultado: %d\n", 30*27);
+} 
+
+//3. Faça um programa que imprima a média aritmética entre os números 5, 8, 12.
+void q03() {
+    //int=inteiro    float=real    char=caractere   char[20]
+    int num1 = 5;
+    int num2 = 8;
+    int num3 = 12;
+    float media = (5+8+12)/3.0;
+    printf("Media de %d %d %d = %.2f\n", num1, num2, num3, media);
+}
+
+//4. Faça um programa que leia e imprima um número inteiro.
+
+void q04(){
+
+int a;
+
+printf("Digite um numero inteiro\n");
+scanf("%d", &a);
+printf("O numero e:%d\n", a);
+
+}
+
+//5. Faça um programa que leia dois números reais e os imprima.
+
+void q05() {
+
+int a, b;
+
+printf("digite dois numeros:\n");
+scanf("%d", &a);
+scanf("%d", &b);
+
+printf("Os numeros sao: %d %d \n", a,b);
+
+}
+//6. Faça um programa que leia um número inteiro e imprima o seu
+//   antecessor e o seu sucessor.
+
+void q06 () {
+
+int a, ant, suc;
+
+printf("Digite um numero: \n");
+scanf("%d", &a);
+
+ant=a-1;
+suc=a+1;
+
+printf("O numero é: %d\no antecessor é:%d\no sucessor é:%d", a, ant, suc);
+
+}
+
+//7. Faça um programa que leia o nome o endereço e o telefone de
+//   um cliente e ao final, imprima esses dados.
+
+void q07(){
+
+char nome [50];
+char endereco [70];
+char numero [20];
+
+printf("Digite o nome\n");
+scanf(" %50[^\n]", nome);
+printf("Digite o endereco\n");
+scanf(" %70[^\n]", endereco);
+printf("Digite o numero\n");
+scanf(" %20[^\n]", numero);
+
+printf("Nome:%s\nEndereço:%s\nNumero:%s\n", nome, endereco, numero);
+
+
+}
+//8. Faça um programa que leia dois números inteiros e imprima a
+//   subtração deles.
+
+void q08(){
+
+int a, b, sub;
+
+printf("Digite dois numeros\n");
+scanf("%d", &a);
+scanf("%d", &b);
+
+sub=a-b;
+
+printf("Os numeros sao:\n%d\n%d\nA subtração entre eles é:%d\n", a, b, sub);
+
+}
+
+//9. Faça um programa que leia um número real e imprima ¼ deste número.
+
+void q09(){
+
+float a,b;
+
+printf("digite um numero\n");
+scanf("%f", &a);
+b=a*0.25;
+printf("o numero é:%f\nE 1/4 desse numero é:%f\n",a ,b);
+
+}
+
+//10. Faça um programa que leia três números reais e calcule a
+//    média aritmética destes números. Ao final, o programa deve
+//    imprimir o resultado do cálculo.
+
+void q10(){
+
+float a, b , c, med;
+
+printf("Digite 3 numeros\n");
+scanf("%f", &a);
+scanf("%f", &b);
+scanf("%f", &c);
+
+med=(a+b+c)/3;
+
+printf("O resultado da media aritmetica é: %f", med);
+}
+
+
+
+//11. Faça um programa que leia dois números reais e calcule as
+//    quatro operações básicas entre estes dois números, adição,
+//    subtração,multiplicação e divisão. Ao final, o programa
+//    deve imprimir os resultados dos cálculos.
+
+void q11(){
+
+float a, b, som, sub, mult, div;
+
+printf("Digite dois numeros\n");
+scanf("%f", &a);
+scanf("%f", &b);
+
+som=a+b;
+sub=a-b;
+mult=a*b;
+div=a/b;
+
+printf("Os numeros são:%f %f\nSoma:%f\nSubtração:%f\nMultiplicação:%f\nDivisão:%f\n", a, b, som, sub, mult, div);
+}
+
+//12. Faça um programa que leia um número real e calcule o
+//    quadrado deste número. Ao final, o programa deve
+//    imprimir o resultado do cálculo.
+
+void q12(){
+
+float a, quad;
+
+printf("Digite um numero:\n");
+scanf("%f", &a);
+
+quad=a*a;
+
+printf("O quadrado desse numero é:%f\n", quad);
+
+}
+
+//13. Faça um programa que leia o saldo de uma conta poupança e
+//    imprima o novo saldo, considerando um reajuste de 2%.
+
+void q13(){
+
+float saldo, reajuste, nvsaldo;
+
+printf("Digite o saldo\n");
+scanf("%f", &saldo);
+
+reajuste=saldo*0.02;
+
+nvsaldo=saldo+reajuste;
+
+printf("O novo saldo é:%f\n", nvsaldo);
+
+}
+
+//14. Faça um programa que leia a base e a altura de um retângulo
+//    e imprima o perímetro (base + altura) e a área (base * altura).
+
+void q14(){
+
+float base, altura, perimetro, area;
+
+printf("Digite a base:\n");
+scanf("%f", &base);
+
+printf("Digite a altura:\n");
+scanf("%f", &altura);
+
+perimetro=base+altura;
+area=base*altura;
+
+printf("Perimetro:%f\nArea:%f\n", perimetro, area);
+
+}
+
+//15. Faça um programa que leia o valor de um produto, o percentual
+//    do desconto desejado e imprima o valor do desconto e o valor
+//    do produto subtraindo o desconto.
+
+void q15(){
+
+float valor, percentual, valordesc, valorcmdes, p;
+
+printf("Digite o valor do produto\n");
+scanf("%f", &valor);
+
+printf("Digite o valor do desconto\n");
+scanf("%f", &percentual);
+
+p=percentual/100;
+
+valordesc= (valor*p);
+valorcmdes= valor-valordesc;
+
+printf("o valor do desconto é:%f\nO valor do produto cm desconto é:%f\n", valordesc,valorcmdes);
+
+
+}
+
+//16. Faça um programa que calcule o reajuste do salário de um
+//    funcionário. Para isso, o programa deverá ler o salário atual
+//    do funcionário e ler o percentual de reajuste. Ao final imprimir
+//    o valor do novo salário.
+
+void q16() {
+
+float sal, reajuste, novosal, p, add;
+
+printf("Digite o salario inicial\n");
+scanf("%f", &sal);
+printf("Informe o reajuste desejado:\n");
+scanf("%f", &reajuste);
+
+p=reajuste/100;
+add=sal*p;
+
+novosal=sal+add;
+
+printf("O salario com reajuste é de %.2f\n", novosal);
+
+}
+
+//17. Faça um programa que calcule a conversão entre graus centígrados
+//    e Fahrenheit. Para isso, leia o valor em centígrados e calcule
+//    com base na fórmula a seguir. Após calcular o programa deve
+//    imprimir o resultado da conversão.
+//    F = (9 x C +160) / 5
+
+void q17() {
+
+float C, F;
+
+printf("Insira a temperatura em C\n");
+scanf("%f", &C);
+
+F=(9*C+160)/5;
+
+printf("A temperatura em F é:%.2f", F);
+
+}
+
+
+//18. Faça um programa que calcule a quantidade de litros de combustível
+//    consumidos em uma viagem, sabendo-se que o carro tem autonomia de
+//    12 km por litro de combustível. O programa deverá ler o tempo
+//    decorrido na viagem e a velocidade média e aplicar as fórmulas:
+//    D = T x V       L = D / 12
+//    Em que:
+//    • D = Distância percorrida em horas
+//    • T = Tempo
+//    • V = Velocidade média
+//    • L = Litros de combustível consumidos
+//    Ao final, o programa deverá imprimir a distância percorrida e a
+//    quantidade de litros consumidos na viagem.
+
+void q18() {
+float t, v, d, l; 
+
+printf("Digite o tempo de viagem\n");
+scanf("%f", &t);
+printf("Em seguida, digite a velocidade media:\n");
+scanf("%f", &v);
+
+d=t*v;
+l=d/12;
+
+printf("A distancia percorrida foi de:  %.4f Km\nE o consumo foi de %.4f litros\n", d, l);
+
+}
+
+//19. Faça um programa que calcule o valor de uma prestação em atraso.
+//    Para isso, o programa deve ler o valor da prestação vencida, a
+//    taxa periódica de juros e o período de atraso. Ao final, o
+//    programa deve imprimir o valor da prestação atrasada, o período
+//    de atraso, os juros que serão cobrados pelo período de atraso, o
+//    valor da prestação acrescido dos juros. Considere juros simples.
+
+void q19() {
+
+float valorp, taxa, juros, valorj, tempo, valor;
+
+printf("Digite o valor da parcela\n");
+scanf("%f", &valorp);
+
+printf("Digite a taxa de juros\n");
+scanf("%f", &taxa);
+
+printf("Digite tempo de atraso:\n(Em meses)\n");
+scanf("%f", &tempo);
+
+juros=taxa*0.01;
+valorj=valor*juros*tempo;
+//valorj=valorp*taxa*tempo;
+valor=valorp+valorj;
+
+printf("Atraso de %.f meses\nJuros totais R$%.4f \nValor ajustado R$%.2f\n", tempo, valorj, valor);
+
+}
+
+//20. Faça um programa que efetue a apresentação do valor da conversão
+//    em real (R$) de um valor lido em dólar (US$). Para isso, será
+//    necessário também ler o valor da cotação do dólar.
+
+void q20(){
+
+float dolar, real, cot=4.97;
+
+printf("DIgite o valor para conversao dolar para real:\n");
+scanf("%f", &dolar);
+
+real=dolar*cot;
+
+printf("O valor convertido é de R$%.2f\n", real);
+
+}
+
+int main() {
+    q19();
+
+    return EXIT_SUCCESS;
+}
